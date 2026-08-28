@@ -1,39 +1,44 @@
 # UNIVERSAL DYNAMIC AI VIBE CODING WORKFLOW
 
-**Version:** 1.4.0
+**Version:** 1.6.0
 **Status:** Canonical entry point
 
 ## 1. PURPOSE
 
-This repository is **Layer 1**: a reusable workflow for turning a project idea into a persistent project documentation system and then building the project from that documentation.
+This repository is **Layer 1**: a reusable workflow for transforming a project idea into a persistent project knowledge system and implementing the project from that system.
 
-It is not the project repository and must never be used as the project output repository.
+It is never the project output repository.
 
 ## 2. THREE LAYERS
 
 ```text
 LAYER 1 — WORKFLOW REPOSITORY
-        ↓ interview + universal rules
-LAYER 2 — PROJECT DOCUMENTATION
-        ↓ approved project specification + copied operating rules
+        ↓
+interview + universal operating rules
+        ↓
+LAYER 2 — PROJECT REPOSITORY
+        ↓
+project documentation + derived operating rules
+        ↓
 LAYER 3 — PROJECT IMPLEMENTATION
-        ↓ code / tests / scripts / infrastructure
+        ↓
+code / tests / scripts / infrastructure
 ```
 
-Layer 2 and Layer 3 live in the **same project repository**.
+Layer 2 and Layer 3 use the **same project repository**.
 
 ## 3. FIRST ACTION
 
-When this workflow is loaded:
+When loaded:
 
-1. Read this file first.
-2. Load only the supporting rules needed for the current stage from `core/`, `engineering/`, `governance/`, and `optimization/`.
+1. Read `WORKFLOW.md` first.
+2. Load only supporting rules required for the current stage.
 3. Identify the workflow repository.
-4. Ask for the **Project Output Repository** before generating project documentation for a new project.
-5. Verify the Project Output Repository is different from the workflow repository.
-6. Never write project output into the workflow repository.
+4. Ask for the **Project Output Repository**.
+5. Verify it is different from the workflow repository.
+6. Never write project output into Layer 1.
 
-Do not start coding merely because the workflow was loaded.
+Do not begin implementation during discovery.
 
 ## 4. PROJECT FLOW
 
@@ -42,171 +47,222 @@ READ WORKFLOW
 → LOAD RELEVANT RULES
 → DISCOVER PROJECT
 → INTERVIEW
-→ PERSIST INTERVIEW STATE
+→ PERSIST STATE
 → SYNTHESIZE PROPOSAL
 → APPROVAL
 → GENERATE LAYER 2
-→ INITIALIZE PHASE/TASK LOGS
-→ DEVELOPMENT FROM DOCUMENTATION
-→ TEST / VERIFY
-→ COMMIT TASK
-→ COMMIT MATERIAL FIX
+→ INITIALIZE PHASE/TASK STATE
+→ PLAN PARALLEL WORK
+→ IMPLEMENT LAYER 3
+→ SYNC REPOSITORY
+→ CLAIM TASK
+→ EXECUTE
+→ VERIFY
+→ UPDATE STATE
+→ COMMIT
 → PUSH COMPLETED PHASE
-→ CHECKPOINT / LEARN
-→ CONTINUE
+→ LEARN / CONTINUE
 ```
 
 ## 5. INTERVIEW
 
-Use progressive, conditional interview. Default language is **Bahasa Indonesia**; technical/domain terms remain in their original form. The developer may choose another language.
+Use a progressive and conditional interview.
 
-Persist material answers, decisions, assumptions, unknowns, and contradictions while interviewing. Do not rely on conversation history as the durable state.
+Default interview language is **Bahasa Indonesia**. Technical and domain terms remain in their original form. The developer may choose another language.
 
-Before approval, maintain the project proposal and interview state in the **project repository**, not this workflow repository.
+Persist material:
+
+* answers;
+* decisions;
+* assumptions;
+* unknowns;
+* contradictions;
+* requirements;
+* constraints;
+* project state.
+
+The conversation is not the durable project state.
+
+All project artifacts must be written to the Project Output Repository, never Layer 1.
 
 ## 6. LAYER 2 GENERATION
 
-After proposal approval, generate only the documents relevant to the project under `docs/`, plus a root `AGENTS.md`.
+After proposal approval, generate only documents justified by the project under `docs/`, plus root `AGENTS.md`.
 
-Minimum entry structure:
+Layer 2 and Layer 3 use the same repository.
+
+`AGENTS.md` is the Layer 3 entry point and must explain:
+
+* documentation reading order;
+* source-of-truth precedence;
+* current phase/task;
+* task ownership;
+* parallel execution rules;
+* skill discovery and loading;
+* memory retrieval and persistence;
+* model/agent switching;
+* repository synchronization;
+* Git strategy;
+* verification and recovery.
+
+### Derived operating rules
+
+Layer 2 must contain the applicable project-ready operating rules derived from Layer 1, including:
+
+* parallel/sequential execution;
+* multi-AI coordination;
+* task ownership;
+* repository synchronization;
+* dynamic agents;
+* skills;
+* memory;
+* model routing/switching;
+* context strategy;
+* checkpoint/recovery;
+* testing/verification;
+* Git;
+* documentation synchronization;
+* change control;
+* cost/token optimization.
+
+Do not blindly copy Layer 1. Generate only applicable rules.
+
+Layer 2 must operate independently from Layer 1.
+
+## 7. LAYER 3 RUNTIME
+
+After Layer 2 generation, AI must follow the generated project documentation.
+
+Before every task:
 
 ```text
-<project-repository>/
-├── AGENTS.md
-└── docs/
-    ├── PROJECT.md
-    ├── REQUIREMENTS.md
-    ├── ARCHITECTURE.md
-    ├── TASK-PLAN.md
-    ├── PHASE-LOG.md
-    ├── TASK-LOG.md
-    └── operating/
-        ├── EXECUTION.md
-        ├── AGENTS.md
-        ├── SKILLS.md
-        ├── MODELS.md
-        ├── MEMORY.md
-        └── GIT.md
+READ AGENTS.md
+→ IDENTIFY PHASE/TASK
+→ SYNC/PULL LATEST REPOSITORY
+→ CHECK TASK OWNERSHIP
+→ CHECK DEPENDENCIES / FILE SCOPE
+→ CLAIM TASK
+→ LOAD RELEVANT DOCS / SKILLS / MEMORY
+→ EXECUTE
+→ VERIFY
+→ UPDATE LOG / STATE
+→ SYNC IF REQUIRED
+→ COMMIT
 ```
 
-Add other project documents only when justified, such as API, database, security, testing, deployment, design system, or environment documentation.
+Approved documentation is the project source of truth.
 
-### Operating rules copied from Layer 1
+## 8. MULTI-AI EXECUTION
 
-Layer 2 must contain a **derived, project-ready copy** of the general operating conditions from Layer 1 that are applicable to the project. This includes, when relevant:
+Multiple AI agents may work concurrently in the same project repository.
 
-- parallel/sequential execution;
-- dynamic agent selection and switching;
-- skill discovery, selection and lifecycle;
-- model routing and switching;
-- context and memory strategy;
-- task orchestration;
-- checkpoint and recovery;
-- testing and verification;
-- cost/token optimization;
-- permissions and security;
-- documentation synchronization;
-- change control and learning;
-- Git commit/push strategy.
+Parallel execution is allowed only for tasks proven independent.
 
-Layer 2 must not require Layer 1 to be present at runtime.
+Before starting a task, every AI must synchronize with the latest repository state.
 
-`AGENTS.md` is the project entry point. It explains the purpose, reading order, relationships, precedence, and use of all generated documents.
+An AI must not:
 
-## 7. LAYER 3 DEVELOPMENT
+* overwrite another AI's newer changes;
+* reset/discard another AI's work;
+* force-push shared history;
+* modify an actively owned conflicting task;
+* assume the repository state is current without synchronization.
 
-Once Layer 2 is generated and approved, implementation begins.
+If ownership or scope is unclear:
 
-The AI must:
+```text
+STOP
+→ inspect state
+→ coordinate
+→ continue only after ownership is clear
+```
 
-- read `AGENTS.md` first;
-- follow the relevant `docs/` documents;
-- treat approved documentation as the project source of truth;
-- update documentation when material decisions or implementation changes alter it;
-- never silently redefine approved scope or architecture.
+Independent tasks may run in parallel.
 
-## 8. PHASE / TASK TRACEABILITY
+Tasks sharing files, state, contracts, dependencies, or ordering constraints must be serialized or explicitly coordinated.
+
+## 9. TASK / PHASE TRACEABILITY
 
 Before implementation:
 
-- create the phase plan;
-- create the initial task graph;
-- initialize `PHASE-LOG.md` and `TASK-LOG.md`.
+* create the phase plan;
+* create the initial task graph;
+* identify dependencies;
+* identify parallel-safe tasks;
+* initialize `PHASE-LOG.md`;
+* initialize `TASK-LOG.md`.
 
-During implementation:
-
-```text
-TASK START
-→ mark RUNNING
-→ execute
-→ test / verify
-→ update TASK-LOG
-→ commit task
-→ mark DONE
-```
-
-For failures:
+Each task records at minimum:
 
 ```text
-ERROR
-→ diagnose
-→ fix
-→ verify
-→ log fix
-→ separate fix commit
-→ continue
+Task ID
+Phase
+Status
+Owner
+Scope
+Files / Areas
+Dependencies
+Parallel-Safe
+Started
+Completed
+Commit
+Verification
 ```
 
-At phase completion:
+## 10. GIT
+
+Git is both a persistence mechanism and a coordination boundary.
+
+Default:
+
+* synchronize before every task;
+* each completed task produces a commit;
+* material fixes use separate commits;
+* task/phase logs reference commits;
+* completed phases are pushed;
+* resolve upstream changes before committing;
+* never overwrite another AI's work.
+
+Phase completion:
 
 ```text
-all phase tasks DONE
-→ verification
-→ update PHASE-LOG
-→ push phase
+ALL TASKS DONE
+→ FINAL SYNC
+→ VERIFY
+→ UPDATE PHASE LOG
+→ COMMIT
+→ PUSH
 ```
 
-Use parallel execution only for independent tasks. Dependent or conflicting work remains sequential.
+## 11. CONTINUITY
 
-## 9. CONTINUITY
-
-A new session, model, or agent must recover from durable project artifacts, not conversation memory alone:
+A new AI, model, or session must recover from:
 
 ```text
 AGENTS.md
 → relevant docs
-→ TASK-PLAN / PHASE-LOG / TASK-LOG
+→ TASK-PLAN
+→ PHASE-LOG
+→ TASK-LOG
+→ relevant skills
+→ relevant memory
 → Git state
-→ checkpoint / current context
-→ continue
+→ current task
 ```
 
-Model, agent, and skill changes are allowed when the required state is preserved.
+Conversation history is supplementary.
 
-## 10. SUPPORTING RULES
+## 12. MODULAR RULES
 
-Use the modular documents instead of expanding this file unnecessarily:
+`WORKFLOW.md` is the entry point, not the complete rulebook.
 
-- `core/PROJECT-BOOTSTRAP.md` — repository boundaries and project initialization.
-- `core/INTERVIEW.md` — interview engine.
-- `core/AGENTS.md` — agent strategy.
-- `core/SKILLS.md` — skill strategy.
-- `core/MODELS.md` — model routing.
-- `core/MEMORY.md` — memory strategy.
-- `core/TASKS.md` — task system.
-- `core/ARTIFACTS.md` — durable artifacts.
-- `core/CONTEXT.md` — context strategy.
-- `core/TRACEABILITY.md` — traceability.
-- `engineering/RECOVERY.md` — recovery.
-- `engineering/TESTING.md` — testing.
-- `engineering/SECURITY.md` — security.
-- `engineering/RELEASE.md` — release.
-- `governance/CHANGE-CONTROL.md` — controlled change.
-- `governance/LEARNING.md` — learning.
-- `governance/AUDIT.md` — audit.
-- `optimization/SCHEDULING.md` — parallel/sequential scheduling.
-- `optimization/TOKENS.md` — token strategy.
-- `optimization/COST.md` — cost strategy.
-- `optimization/CACHE.md` — cache strategy.
+Load specialized rules from:
 
-Load only what is relevant. Do not reproduce every rule in `WORKFLOW.md`.
+```text
+core/
+engineering/
+governance/
+optimization/
+```
+
+Do not duplicate specialized rules unnecessarily.
