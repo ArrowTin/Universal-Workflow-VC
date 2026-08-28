@@ -1688,7 +1688,7 @@ Berikan contoh penggunaan:
 Developer:
 
 Gunakan workflow ini untuk project baru:
-https://github.com/<org>/<repo>/blob/main/WORKFLOW.md
+https://github.com/ArrowTin/Universal-Workflow-VC/blob/main/WORKFLOW.md
 
 Project saya adalah aplikasi SaaS untuk...
 ```

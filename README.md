@@ -28,7 +28,7 @@ Its purpose is to let a developer give an AI Vibe Coding agent one workflow refe
 
 Use:
 
-`https://github.com/<ORG>/<REPO>/blob/main/WORKFLOW.md`
+`https://github.com/ArrowTin/Universal-Workflow-VC/blob/main/WORKFLOW.md`
 
 Then tell your coding AI:
 

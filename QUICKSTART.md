@@ -9,7 +9,7 @@ Fork or copy this repository into GitHub.
 Example:
 
 > Gunakan workflow ini untuk project saya:
-> https://github.com/<ORG>/<REPO>/blob/main/WORKFLOW.md
+> https://github.com/ArrowTin/Universal-Workflow-VC/blob/main/WORKFLOW.md
 >
 > Saya ingin membangun SaaS dashboard analytics.
 
