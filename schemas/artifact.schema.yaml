@@ -1,0 +1,8 @@
+artifact_id: string
+type: string
+version: string
+owner: string
+source_task: string
+status: string
+created_at: string
+updated_at: string

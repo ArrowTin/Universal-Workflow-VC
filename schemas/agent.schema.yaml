@@ -1,0 +1,7 @@
+agent_id: string
+role: string
+capabilities: list[string]
+permissions: list[string]
+model: string
+skills: list[string]
+status: string

@@ -1,0 +1,14 @@
+workflow_version: string
+project_state: object
+task_state: object
+architecture_state: object
+memory_state: object
+context_state: object
+artifact_state: object
+git_state: object
+test_state: object
+environment_state: object
+deployment_state: object
+known_issues: list[string]
+next_actions: list[string]
+rollback_state: object

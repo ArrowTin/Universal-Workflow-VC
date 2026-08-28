@@ -1,0 +1,12 @@
+skill_id: string
+name: string
+version: string
+capabilities: list[string]
+compatible_agents: list[string]
+compatible_models: list[string]
+supported_project_types: list[string]
+required_tools: list[string]
+permission_scope: list[string]
+cost: string
+quality_score: number
+success_rate: number

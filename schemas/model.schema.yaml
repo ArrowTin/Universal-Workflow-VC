@@ -1,0 +1,8 @@
+model_id: string
+provider: string
+capabilities: list[string]
+context_capacity: string
+cost_profile: string
+latency_profile: string
+privacy_profile: string
+status: string
