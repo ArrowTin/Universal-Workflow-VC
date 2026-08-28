@@ -98,8 +98,8 @@ Layer 2 and Layer 3 use the same repository.
 * current phase/task;
 * task ownership;
 * parallel execution rules;
-* skill discovery and loading;
-* memory retrieval and persistence;
+* skill discovery and loading (including project-local skills setup);
+* memory retrieval and persistence (including memory storage mechanism);
 * model/agent switching;
 * repository synchronization;
 * Git strategy;
@@ -128,6 +128,79 @@ Layer 2 must contain the applicable project-ready operating rules derived from L
 Do not blindly copy Layer 1. Generate only applicable rules.
 
 Layer 2 must operate independently from Layer 1.
+
+### Comprehensive Layer 2 generation
+
+Layer 2 generation must adapt and integrate all relevant Layer 1 modular components:
+
+**Core Concepts (from core/):**
+- AGENTS.md → Agent system and multi-AI coordination
+- TASKS.md → Task system, state management, traceability
+- SKILLS.md → Skill system and lifecycle
+- MEMORY.md → Memory classes and gatekeeper rules
+- ARTIFACTS.md → Artifact system and versioning
+- CONTEXT.md → Context engineering and priority
+- CONTRACTS.md → Contract system and boundaries
+- PRINCIPLES.md → Core principles adherence
+- PROJECT-BOOTSTRAP.md → Bootstrap requirements
+
+**Engineering Practices (from engineering/):**
+- ARCHITECTURE.md → Architecture practices
+- ENVIRONMENTS.md → Environment management
+- RECOVERY.md → Recovery and checkpoint strategies
+- RELEASE.md → Release practices
+- SECURITY.md → Security practices
+- TESTING.md → Testing practices
+
+**Governance Rules (from governance/):**
+- AUDIT.md → Audit trail requirements
+- CHANGE-CONTROL.md → Change control process
+- LEARNING.md → Learning and improvement
+- PERMISSIONS.md → Permission management
+
+**Optimization Guidelines (from optimization/):**
+- CACHE.md → Caching strategies
+- COST.md → Cost optimization
+- TOKENS.md → Token optimization
+
+Each Layer 2 document should adapt only the relevant components from Layer 1 based on project needs.
+
+### Layer 2 adaptation guidance
+
+For detailed guidance on adapting Layer 1 components to Layer 2, refer to:
+
+- `templates/guidance/CORE-ADAPTATION.md` - Core concepts adaptation
+- `templates/guidance/ENGINEERING-ADAPTATION.md` - Engineering practices adaptation
+- `templates/guidance/GOVERNANCE-ADAPTATION.md` - Governance rules adaptation
+- `templates/guidance/OPTIMIZATION-ADAPTATION.md` - Optimization guidelines adaptation
+
+These guidance documents provide:
+- Mapping between Layer 1 and Layer 2
+- When to adapt each component
+- What to include in adaptations
+- Project-specific customization guidelines
+- Minimal vs comprehensive adaptation options
+- Best practices for integration
+
+### Skills and memory setup
+
+During Layer 2 generation:
+
+**Skills:**
+- Assess project complexity and repetitive patterns
+- Determine if project-local skills are needed
+- Most projects start with NO project-local skills
+- If needed, create `.devin/skills/` structure
+- Document skill approach in `docs/operating/SKILLS.md`
+- Populate skills incrementally during implementation
+
+**Memory:**
+- Assess knowledge-intensive areas
+- Choose appropriate memory storage mechanism
+- Create memory storage structure (e.g., `.devin/memory/`)
+- Document memory approach in `docs/operating/MEMORY.md`
+- Initialize empty memory files
+- Populate memory as implementation progresses
 
 ## 7. LAYER 3 RUNTIME
 
@@ -263,6 +336,15 @@ core/
 engineering/
 governance/
 optimization/
+templates/guidance/
 ```
+
+### Layer 2 generation resources
+
+When generating Layer 2 documentation, use the following resources:
+
+- `templates/operating/` - Operating rules templates
+- `templates/guidance/` - Adaptation guidance for all Layer 1 components
+- `templates/` - Document templates for various artifacts
 
 Do not duplicate specialized rules unnecessarily.

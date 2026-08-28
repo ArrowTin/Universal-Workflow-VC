@@ -12,6 +12,51 @@ State         = current execution position
 
 Do not use conversation history as the only memory source.
 
+## Memory storage mechanism
+
+### Recommended storage approach
+
+For most projects, use a simple text-based memory system:
+
+```text
+.devin/memory/
+├── decisions.md          # Architectural and technical decisions
+├── discoveries.md       # Implementation discoveries and learnings
+├── failures.md          # Recurring failures and their solutions
+├── patterns.md          # Project-specific patterns and conventions
+├── environment.md       # Environment constraints and setup notes
+└── lessons.md           # Lessons learned during development
+```
+
+### Alternative approaches
+
+Projects may use alternative memory mechanisms:
+- Project wiki or knowledge base
+- Database-backed memory system
+- External documentation system
+- Project-specific memory tools
+
+Choose the simplest approach that meets project needs.
+
+## Memory setup instructions
+
+### Initial project setup
+
+During Layer 2 generation, determine memory needs:
+
+```text
+ASSESS PROJECT COMPLEXITY
+→ IDENTIFY KNOWLEDGE-INTENSIVE AREAS
+→ CHOOSE STORAGE MECHANISM
+→ CREATE MEMORY STORAGE STRUCTURE
+→ DOCUMENT IN MEMORY.md
+→ INITIALIZE EMPTY MEMORY FILES
+```
+
+### Minimal initial memory
+
+Most projects start with empty memory files. Populate memory as implementation progresses and knowledge accumulates.
+
 ## Retrieval
 
 For each task:
@@ -40,6 +85,23 @@ Do not persist:
 * credentials;
 * unnecessary personal data;
 * irrelevant conversation.
+
+## Memory file format
+
+For text-based memory, use structured markdown:
+
+```markdown
+# MEMORY TYPE
+
+## [Date] - Entry Title
+
+**Context:** Task/Area where this was learned
+**Discovery/Decision:** What was learned or decided
+**Impact:** How this affects future work
+**Related:** Links to relevant documentation/tasks
+
+---
+```
 
 ## Updating
 
